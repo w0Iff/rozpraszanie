@@ -31,7 +31,7 @@ public class CleanerService {
             logger.info("Nie znaleziono URL starszych niż {} ", thresholdDate);
             return Collections.emptyList();
         }
-        logger.info("Usówam URL'e starsze niż {}", thresholdDate);
+        logger.info("Usuwam URL'e starsze niż {}", thresholdDate);
         logger.info("Znaleizono {} URL do usunięcia", urls.size());
 
         urls.forEach(url -> logger.info("Usówam {}", url.getLongUrl()));
