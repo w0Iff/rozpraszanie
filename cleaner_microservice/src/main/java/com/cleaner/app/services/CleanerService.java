@@ -32,7 +32,7 @@ public class CleanerService {
             return Collections.emptyList();
         }
         logger.info("Usuwam URL'e starsze niż {}", thresholdDate);
-        logger.info("Znaleizono {} URL do usunięcia", urls.size());
+        logger.info("Znaleziono {} URL do usunięcia", urls.size());
 
         urls.forEach(url -> logger.info("Usuwam {}", url.getLongUrl()));
 
