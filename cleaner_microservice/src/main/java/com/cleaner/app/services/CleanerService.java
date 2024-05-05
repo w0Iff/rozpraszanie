@@ -34,7 +34,7 @@ public class CleanerService {
         logger.info("Usuwam URL'e starsze niż {}", thresholdDate);
         logger.info("Znaleizono {} URL do usunięcia", urls.size());
 
-        urls.forEach(url -> logger.info("Usówam {}", url.getLongUrl()));
+        urls.forEach(url -> logger.info("Usuwam {}", url.getLongUrl()));
 
         urlRepository.deleteAll(urls);
         return urls;
