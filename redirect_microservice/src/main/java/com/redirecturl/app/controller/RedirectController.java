@@ -28,9 +28,9 @@ public class RedirectController {
 
     @GetMapping("/{id}")
     public ResponseEntity<String> getLongUrl(@PathVariable("id") @Pattern(regexp = "^\\d+$") String shortedUrl) {
-        log.info("path variable: {}", shortedUrl);
+        log.info("zmienna ścieżki: {}", shortedUrl);
         String longUrl = redirectService.exec(shortedUrl);
-        log.info("longUrl to redirect: {}", longUrl);
+        log.info("URL do przekierowania: {}", longUrl);
         URI uri = URI.create(longUrl);
         return ResponseEntity.status(HttpStatus.FOUND).location(uri).build();
     }
