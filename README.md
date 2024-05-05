@@ -1,3 +1,4 @@
+START ORDER 
       │
       └───►   Cassandra -> Kafka -> Services
 
