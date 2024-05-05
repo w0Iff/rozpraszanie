@@ -27,7 +27,7 @@ public class RedirectService {
     }
 
     public String exec(String shortedUrl) {
-        log.info("wykonuje zadanie z url: {}", shortedUrl);
+        log.info("wykonuje zadanie z URL: {}", shortedUrl);
         List<Url> urls = cleanerExternalService.exec();
         for (Url url : urls) {
             if (url.getLongUrl().equals(shortedUrl)) {
@@ -40,7 +40,7 @@ public class RedirectService {
                 .orElseThrow(() -> new UrlWasCleanedException("URL wygasł lub nie istnieje: " + shortedUrl))
                 .getLongUrl();
 
-        log.info("Redirecting {} to {}", shortedUrl, longUrl);
+        log.info("Przekierowanie {} na {}", shortedUrl, longUrl);
         return longUrl;
     }
 
